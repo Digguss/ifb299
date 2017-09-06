@@ -1,2 +1,0 @@
-# Smary City Project
-Folder
