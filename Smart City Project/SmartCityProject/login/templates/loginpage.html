@@ -3,16 +3,43 @@
 <Head>
 <style>
 
-body {background-color: black;}
-h1 {color: white;
+body {background-color: white;
+      text-align: center;}
+
+
+h1 {color: black;
     text-align: center;
     }
+button{
+  background-color: grey;
+  padding: 20px 32px;
+  border-radius: 8px;
+}
+
+
+
+
+h2 {
+  text-align: center;
+}
 
 </style>
 
 
 
-<h1> Hello </h1>
+
+
+<h1> Login to your SmartCity Account</h1>
+<h2> Login </h2>
+
+ <b>
+   <form method="post">
+   {% csrf_token %}
+   {{ form.as_p }}
+   <button type="submit" name="button"> Login</button>
+ </b>
+
+
 
 </body>
 
