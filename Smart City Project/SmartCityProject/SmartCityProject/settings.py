@@ -54,7 +54,9 @@ ROOT_URLCONF = 'SmartCityProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+        "C:/Users/Kyle\Documents/GitHub/ifb299\Smart City Project/SmartCityProject/regpage/templates/registpage"
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,7 +77,7 @@ WSGI_APPLICATION = 'SmartCityProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'SmartCitydatabase',
         'USER': 'root',
         'PASSWORD': 'password',
