@@ -1,13 +1,27 @@
 
-
-{% block title %}Login{% endblock %}
-
 {% block content %}
+<style>
+h2 {
+  text-align: center;
+}
+div {
+  text-align: center;
+  width: 350px;
+}
+
+
+</style>
+
   <h2>Register Account</h2>
-  <form method="post">
+  <div class="container1">
+  <form method="post" >
     {% csrf_token %}
     {{ form.as_p }}
 
-    <button type="submit">Login</button>
+    <button type="submit">Regiser Account</button>
+
+
   </form>
+    </div>
+
 {% endblock %}
