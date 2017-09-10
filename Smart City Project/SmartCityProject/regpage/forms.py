@@ -6,6 +6,6 @@ from django.contrib.auth.models import User
 class regpage(UserCreationForm):
     email = forms.EmailField(max_length = 100, help_text ='Required Field')
 
-    class meta:
+    class Meta:
         model = User
-        fields = ('username','password','email',)
+        fields = ('username','password','email')
