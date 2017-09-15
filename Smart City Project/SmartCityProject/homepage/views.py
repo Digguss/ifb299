@@ -6,4 +6,6 @@ from django.contrib.auth.decorators import login_required
 
 
 def homepage(request):
+    if not request.user.is_authenticated:
+        return redirect('/welcome/')
     return render (request, 'homepage.html')
