@@ -6,6 +6,8 @@ from regpage.forms import regpage
 
 
 def registration(request):
+    if request.user.is_authenticated():
+        return redirect('/')
     if request.method == 'POST':
         form = regpage(request.POST)
         if form.is_valid():

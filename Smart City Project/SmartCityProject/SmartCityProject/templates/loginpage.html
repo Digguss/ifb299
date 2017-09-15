@@ -5,9 +5,13 @@
 
   <form method="post" >
     {% csrf_token %}
-    {{ form.as_p }}
+    <label for="Username"> Username </label>
+    <input type="text" name="Username">
+    <br>
+    <label for="Password">Password</label>
+    <input type="text" name="Password">
 
-    <button type="submit">Regiser Account</button>
+    <button type="submit">Login</button>
 
 
   </form>

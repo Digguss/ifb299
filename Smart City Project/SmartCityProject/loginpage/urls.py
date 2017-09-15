@@ -1,9 +1,10 @@
 from django.conf.urls import url
 from . import views
+from django.contrib.auth.views import login
 
 
 urlpatterns = [
 
-    url(r'^', views.loginuser, name='loginpage'),s
+    url(r'^', login , {'template_name': 'registerpage.html'}),
 
 ]
