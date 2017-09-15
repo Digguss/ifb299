@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^register/', include('regpage.urls')),
     url(r'^$', include('homepage.urls')),
-    url(r'^login/', include('loginpage.urls')),    
+    url(r'^login/', include('loginpage.urls')),
+    url(r'^logout/', include('logoutpage.urls')),    
 ]
