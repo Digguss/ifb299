@@ -1,0 +1,14 @@
+</style>
+
+  <h2>Register Account</h2>
+  <div id ="Box">
+
+  <form method="post" >
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Regiser Account</button>
+
+
+  </form>
+  </div>

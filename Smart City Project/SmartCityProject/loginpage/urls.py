@@ -1,8 +1,9 @@
 from django.conf.urls import url
 from . import views
 
+
 urlpatterns = [
 
-    url(r'^', views.registration, name='registerpage'),
+    url(r'^', views.loginuser, name='loginpage'),s
 
-            ]
+]
