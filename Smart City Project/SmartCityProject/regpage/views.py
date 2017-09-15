@@ -15,7 +15,7 @@ def registration(request):
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=password)
-            login(request, user)
+            return redirect('/login/')
     else:
         form = regpage()
     return render(request, 'registerpage.html', {'form': form})
