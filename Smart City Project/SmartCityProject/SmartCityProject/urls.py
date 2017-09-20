@@ -20,8 +20,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^register/', include('regpage.urls')),
-    url(r'^$', include('homepage.urls')),
+    url(r'^', include('homepage.urls')),
     url(r'^login/', include('loginpage.urls')),
     url(r'^logout/', include('logoutpage.urls')),
-    url(r'^welcome/', include('welcomepage.urls')),      
+    url(r'^welcome/', include('welcomepage.urls')),
 ]

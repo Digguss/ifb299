@@ -5,6 +5,6 @@ from django.contrib.auth.views import login
 
 urlpatterns = [
 
-url(r'^', login , {'template_name': 'registerpage.html'}),
+url(r'^', views.loginuser , name='login'),
 
 ]

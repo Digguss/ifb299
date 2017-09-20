@@ -5,4 +5,4 @@ from django.contrib.auth import logout
 
 def logoutuser(request):
     logout(request)
-    return redirect('/')
+    return redirect('/login/')
