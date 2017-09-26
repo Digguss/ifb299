@@ -5,6 +5,6 @@ from django.contrib.auth.views import login
 
 urlpatterns = [
 
-url(r'^', views.loginuser , name='login'),
+url(r'^', views.loginuser),
 
 ]
