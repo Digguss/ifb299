@@ -1,25 +1,122 @@
+<style>
+h1{
+  text-align: center;
+  background-color: lightblue;
+  font-size: 50px;
+  font-family: Arial;
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+}
+h2{
+  text-align: center;
+  font-family: arial;
+  color: black;
+}
+label{
+  display: block;
+}
+.sidebarul{
+  position: fixed;
+  background-color: lightblue;
+  top: 50px;
+  margin-left: 0;
+  padding-left: 0px;
+  padding-bottom: 600px;
+}
+.sidebarul a{
+  display: block;
+  padding-bottom: 10px;
+  background-color: lightblue;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: arial;
+  color: black;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 4px;
+}
+.sidebarul a:hover{
+  background-color: grey;
+  color: white;
+}
+.formpost{
+  margin: 100px auto;
+  width: 23em;
+  min-width: 300px;
+  text-align: center;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  font-family: arial;
+  font-size: 20px;
+  position: relative;
+  top: 100px;
+}
+.pw{
+  width: 200px;
+}
+.username{
+  width: 200px;
+}
+.loginbutton {
+  width: 200px;
+}
+input{
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: white;
+}
+button{
+  background-color: white;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: white;
+  height: 40px;
+}
+
+
 </style>
 
-  <h2>Login</h2>
-  <div id ="Box">
+<h1>Smart City Brisbane</h1>
 
-    {% if messages %}
-    <ul>
-      {% for message in messages %}
-      <li>{{message}}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
+  <ul class ="sidebarul">
+    <h2> Content </h2>
+    <a href="/welcome/"> Homepage </a>
+    <a href="/register/"> Register Account </a>
+    <a href="/help/"> Help </a>
+    <a href="/admin/"> Admin Login </a>
+  </ul>
 
+  <body class="loginbody">
   <form method="post" >
-    {% csrf_token %}
-    <label for="id_username">Username:</label> <input id="username" name="username" type="text" required />
+      {% csrf_token %}
+    <div class="formpost">
+    <div class = 'messages'>
+
+          {% if messages %}
+          <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+    <h2> Login </h2>
+    <label for="id_username">Username:</label>
+    <input class= 'username' name="username" type="text" required />
     <br>
-    <label for="id_password">Password:</label> <input id="pw" name="password" type="password" required />
     <br>
-
-    <button type="submit">Login</button>
-
-
+    <label for="id_password">Password:</label>
+    <input class= 'pw' name="password" type="password" required />
+    <br>
+    <br>
+    <button class= 'loginbutton' type="submit">Login</button>
+    <br>
+    <br>
+      </div>
   </form>
-  </div>
+
+</body>

@@ -1,25 +1,107 @@
-{% block content %}
 <style>
-h2 {
+h1{
+  text-align: center;
+  font-family: arial;
+  background-color: lightblue;
+  margin-left: 0;
+  margin-top: 0;
+  position: relative;
+  font-size: 50px;
+}
+h2{
+  text-align: center;
+  font-family: arial;
+}
+.postdiv{
+  margin: 100px auto;
+  width: 27em;
+  min-width: 300px;
+  font-family: arial;
+  font-size: 20px;
+  position: relative;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  background-color: lightblue;
+}
+input{
+  position: relative;
+  width: 200px;
+  display: block;
+  left: 250px;
+  bottom: 20px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 4px;
+  border-width: 1px;
+}
+label{
   text-align: center;
 }
-div {
-  text-align: center;
+.helptext{
+  text-align: left;
+  display: block;
 }
-#Box {
-  text-align: center;
+select{
+  display: block;
+  position: relative;
+  width: 200px;
+  left: 250px;
+  bottom: 20px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 4px;
 }
+button{
+  display: block;
+  position: relative;
+  background-color: white;
+  width: 200px;
+  left: 160px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 4px;
+  height: 40px;
 
-form {
-  text-align: center;
 }
-
-
+.sidebar{
+  position: fixed;
+  background-color: lightblue;
+  top: 50px;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 600px;
+}
+.sidebar a{
+  display: block;
+  padding-bottom: 10px;
+  background-color: lightblue;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: arial;
+  color: black;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 4px;
+}
+.sidebar a:hover{
+  background-color: grey;
+  color: white;
+}
 </style>
 
-  <h2>Register Account</h2>
-  <div id ="Box">
+  <h1>Register Account</h1>
 
+
+
+  <div class ='postdiv'>
+  <form method="post" >
+    {% csrf_token %}
+  <h2> Register </h2>
+  <div class='errormessages'>
     {% if messages %}
     <ul>
       {% for message in messages %}
@@ -27,15 +109,14 @@ form {
       {% endfor %}
     </ul>
     {% endif %}
-
-  <form method="post" >
-    {% csrf_token %}
+  </div>
     {{ form.as_p }}
-
     <button type="submit">Regiser Account</button>
-
-
   </form>
   </div>
 
-{% endblock %}
+  <ul class="sidebar">
+    <h2> Context </h2>
+      <a href="/"> Homepage </a>
+      <a href="help"> Help</a>
+    </ul>

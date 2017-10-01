@@ -7,6 +7,8 @@ from django.contrib import messages
 
 
 def loginuser(request):
+    if request.user.is_authenticated:
+        return redirect('/')
     username = request.POST.get('username')
     password = request.POST.get('password')
     if username and password != '':
