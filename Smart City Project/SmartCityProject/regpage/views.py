@@ -10,6 +10,12 @@ from django.contrib import messages
 def registration(request):
     if request.user.is_authenticated():
         return redirect('/')
+    if not Group.objects.filter(name='business').exists():
+        Group.objects.create(name='business')
+    if not Group.objects.filter(name='tourist').exists():
+        Group.objects.create(name='tourist')
+    if not Group.objects.filter(name='student').exists():
+        Group.objects.create(name='student')
     if request.method == 'POST':
         form = regpage(request.POST)
         if form.is_valid():

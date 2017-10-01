@@ -10,11 +10,11 @@ def homepage(request):
     if not request.user.is_authenticated:
         return redirect('/welcome/')
     if request.user.is_authenticated:
-        if request.user.groups.filter(name='tourist').exists():
+        if request.user.groups.filter(name='Tourist').exists():
             return redirect('/tourist/Home/')
-        if request.user.groups.filter(name='businessman').exists():
+        if request.user.groups.filter(name='Business').exists():
             return redirect('/business/Home/')
-        if request.user.groups.filter(name='student').exists():
+        if request.user.groups.filter(name='Student').exists():
             return redirect('/student/Home/')
         if request.user.is_staff:
             return redirect ('/admin/')
