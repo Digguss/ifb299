@@ -2,11 +2,186 @@
 
 h1 {
   text-align: center;
+  background-color: lightblue;
+  font-family: arial;
+  font-size: 50px;
 }
-
+h2{
+  text-align: center;
+  font-family: arial;
+  font-size: 40px;
+}
+.sidebar{
+  position: fixed;
+  background-color: lightblue;
+  top: 50px;
+  margin-left: 0;
+  padding-left: 0px;
+  padding-bottom: 600px;
+}
+.sidebar a{
+  display: block;
+  padding-bottom: 10px;
+  background-color: lightblue;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: arial;
+  color: black;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 4px;
+}
+.sidebar a:hover{
+  background-color: grey;
+  color: white;
+}
+.hotelinfo {
+  position: fixed;
+  margin-left: 100px auto;
+  width: 30em;
+  left: 201px;
+  }
+.museums{
+  position: fixed;
+  margin-left: 100px auto;
+  width: 30em;
+  left: 700px;
+}
+.parks{
+  position: fixed;
+  margin-left: 100px auto;
+  width: 30em;
+  left: 1200px;
+}
+.restaraunts{
+  position: fixed;
+  margin-left: 100px auto;
+  width: 30em;
+  left: 700px;
+  bottom: 200px;
+}
+.malls{
+  position: fixed;
+  margin-left: 100px auto;
+  width: 30em;
+  left: 201px;
+  bottom: 200px;
+}
+.Industries{
+  position: fixed;
+  margin-left: 100px auto;
+  width: 30em;
+  left: 1200px;
+  bottom: 200px;
+}
+th, td {
+  display: relative;
+  text-align: center;
+  background-color: white;
+  font-family: arial;
+  border-style: solid;
+  border-width: 1px;
+  width: 500px;
+}
+div{
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  background-color: lightblue;
+}
+table{
+  display: inline;
+  position: relative;
+}
 </style>
-<html>
-<h1> Welcome to The Smart City Website </h1>
-<br>
-<a href="/logout/"> Logout </a>
-</html>
+
+<h1> Welcome Tourist {{user.username}} </h1>
+
+<ul class="sidebar">
+  <h2> Content </h2>
+  <a href="/">Home</a>
+  <a href="/citymap/"> City Map</a>
+  <a href="/account/">Account Settings</a>
+  <a href="/help/">Help</a>
+  <a href="/logout/">Logout</a>
+</ul>
+
+<div class='hotelinfo'>
+  <h2> Hotels </h2>
+  <table>
+    <tr>
+      <th> Hotel Image </th>
+      <th> Hotel Link </th>
+    </tr>
+    <tr>
+      <td> hotel.png</td>
+      <th> Link here</th>
+    </tr>
+  </table>
+</div>
+<div class='museums'>
+  <h2> Museums </h2>
+  <table>
+    <tr>
+      <th> museum image </th>
+      <th> museums Link </th>
+    </tr>
+    <tr>
+      <td> museums.png</td>
+      <th> Link here</th>
+    </tr>
+  </table>
+</div>
+<div class='parks'>
+  <h2> City Parks </h2>
+  <table>
+    <tr>
+      <th> park image </th>
+      <th> park  Link </th>
+    </tr>
+    <tr>
+      <td> parks png</td>
+      <th> Link here</th>
+    </tr>
+  </table>
+</div>
+<div class='malls'>
+  <h2> Shopping Malls </h2>
+  <table>
+    <tr>
+      <th> mall image </th>
+      <th> mall  Link </th>
+    </tr>
+    <tr>
+      <td> mall.png</td>
+      <th> Link here</th>
+    </tr>
+  </table>
+</div>
+<div class='restaraunts'>
+  <h2> Restaraunts </h2>
+  <table>
+    <tr>
+      <th> Restaraunt image </th>
+      <th> Restaraunt  Link </th>
+    </tr>
+    <tr>
+      <td> Restaraunt.png</td>
+      <th> Link here</th>
+    </tr>
+  </table>
+</div>
+<div class='Industries'>
+  <h2> Industries </h2>
+  <table>
+    <tr>
+      <th> Industries image </th>
+      <th> Industries  Link </th>
+    </tr>
+    <tr>
+      <td> Industries.png</td>
+      <th> Link here</th>
+    </tr>
+  </table>
+</div>
