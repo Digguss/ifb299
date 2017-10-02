@@ -22,20 +22,26 @@ def homepage(request):
 
 def homepagetourist(request):
     if request.user.is_authenticated:
-        if request.user.groups.filter(name='Tourist').exists():
+        if request.user.groups.filter(name='tourist').exists():
             return render(request, 'homepagetourist.html')
+        else:
+            return redirect('/')
     else:
         return redirect('/')
 
-def homepageBusiness(request):
-    if request.user.is_authenticated:
-        if request.user.groups.filter(name='business').exists():
-            return render(request, 'homepageBusiness.html')
-        else:
-            return redirect('/')
 def homepageStudent(request):
     if request.user.is_authenticated:
         if request.user.groups.filter(name='student').exists():
             return render(request, 'homepageStudent.html')
         else:
             return redirect('/')
+    else:
+        return redirect('/')
+def homepageBusiness(request):
+    if request.user.is_authenticated:
+        if request.user.groups.filter(name='business').exists():
+            return render(request, 'homepageBusiness.html')
+        else:
+            return redirect('/')
+    else:
+        return redirect('/')
