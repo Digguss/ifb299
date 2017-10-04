@@ -27,6 +27,10 @@ def registration(request):
                 groupname = form.cleaned_data['groups']
                 usergroup = Group.objects.get(name=groupname)
                 usergroup.user_set.add(user)
+                user.refresh_from_db()
+                user.webuser.address = form.cleaned_data['address']
+                user.webuser.address = form.cleaned_data['phonenumber']
+                user.webuser.save()
                 return redirect('/login/')
     else:
         form = regpage()
