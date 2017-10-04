@@ -66,7 +66,7 @@
 </style>
 <html>
   <body>
-    <h1>My Account Page</h1>
+    <h1>Edit Account Information</h1>
 
     <ul class ="sidebarul">
       <h2> Content </h2>
@@ -77,12 +77,12 @@
       <a href="/admin/"> Admin Login </a>
     </ul>
 
-    <div class = "userInfo">
-      <h2>User Information</h2>
-      <p>Name: {{user.first_name}} {{user.last_name}}</p>
-      <p>Contact Email: {{user.email}}</p>
-      <p>Account Type: {{usergroup}}</p>
-      <a href = "/account/edit/">Edit Information</a>
+    <div class = "editform">
+      <form method="post" >
+      </div>
+        {{ form.as_p }}
+        <button type="submit">Commit Changes</button>
+      </form>
     </div>
   </body>
 </html>
