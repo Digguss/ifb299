@@ -5,6 +5,7 @@ from accountpage.forms import editform
 from accountpage.forms import changepasswordform
 from django.contrib.auth.models import User, Group
 from django.contrib import messages
+from django.contrib.auth.forms import PasswordChangeForm
 # Create your views here.
 
 
@@ -42,10 +43,10 @@ def accountchangepasswordpage(request):
     if not request.user.is_authenticated():
         return redirect('/welcome/')
     if request.method == 'POST':
-        form = changepasswordform(request.POST, user = request.user)
+        form = PasswordChangeForm(data = request.POST, user = request.user)
         if form.is_valid():
             form.save();
             return redirect('/account/')
     else:
-        form = changepasswordform(user = request.user)
+        form = PasswordChangeForm(user = request.user)
     return render (request, 'changepasswordpage.html', {'form' : form})
