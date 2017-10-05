@@ -14,7 +14,7 @@
     color: black;
     font-size: 40px;
   }
-  .sidebarul{
+  .sidebar{
     position: fixed;
     background-color: lightblue;
     top: 50px;
@@ -22,7 +22,7 @@
     padding-left: 0px;
     padding-bottom: 600px;
   }
-  .sidebarul a{
+  .sidebar a{
     display: block;
     padding-bottom: 10px;
     background-color: lightblue;
@@ -35,46 +35,68 @@
     padding-top: 20px;
     padding-right: 4px;
   }
-  .sidebarul a:hover{
+  .sidebar a:hover{
     background-color: grey;
     color: white;
   }
-  div{
+  div {
     border-style: solid;
     border-width: 1px;
     border-radius: 10px;
     background-color: lightblue;
-  }
-  .userinfo a{
-    height: 40px;
-    position: relative;
-    left: 82%;
-  }
-  .userinfo{
     width: 65%;
-    margin-top: 4%;
-    margin-left: 25%;
+    margin-top: 3%;
+    margin-left: 22%;
     padding-left: 5%;
     padding-bottom: 3%;
+    height: 45%;
   }
-  p{
+  p {
     background-color: lightblue;
     font-size: 18px;
     font-family: Arial;
     position: relative;
+  }
+  .button {
+    display: block;
+    position: relative;
+    background-color: white;
+    width: 200px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 18px;
+    font-family: Arial;
+    color: Black;
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+    top: -75px;
+    left: 71%;
+    font-weight: normal;
+  }
+  .changePassword {
+    height: 80px;
+  }
+  .changePassword h2 {
+    text-align: left;
+  }
+  .changePassword .button {
+    top: -52px;
   }
 </style>
 <html>
   <body>
     <h1>My Account Page</h1>
 
-    <ul class ="sidebarul">
+    <ul class="sidebar">
       <h2> Content </h2>
-      <a href="/welcome/"> Homepage </a>
-      <a href="/login/"> Login </a>
-      <a href="/register/"> Register Account </a>
-      <a href="/help/"> Help </a>
-      <a href="/admin/"> Admin Login </a>
+      <a href="/">Home</a>
+      <a href="/citymap/"> City Map</a>
+      <a href="/account/">Account Settings</a>
+      <a href="/help/">Help</a>
+      <a href="/logout/">Logout</a>
     </ul>
 
     <div class = "userInfo">
@@ -84,7 +106,11 @@
       <p>Account Type: {{usergroup}}</p>
       <p>Address: {{user.address}}</p>
       <p>Phone Number: {{user.phone_number}}</p>
-      <a href = "/account/edit/">Edit Information</a>
+      <a class="button" href = "/account/edit/">Edit Information</a>
+    </div>
+
+    <div class = "changePassword">
+      <h2>Change Password<a class="button" href = "/account/changepassword/">Change</a></h2>
     </div>
   </body>
 </html>

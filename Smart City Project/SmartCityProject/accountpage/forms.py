@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.forms import SetPasswordForm, PasswordChangeForm
 from django.contrib.auth.models import User, Group
 
 class editform(forms.ModelForm):
@@ -11,3 +11,9 @@ class editform(forms.ModelForm):
     class Meta:
         model = User
         fields = ('email','first_name', 'last_name', 'address')
+
+
+class changepasswordform(PasswordChangeForm):
+
+    class Meta:
+        fields = ('old_password', 'new_password1', 'new_password2')
