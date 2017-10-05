@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^logout/', include('logoutpage.urls')),
     url(r'^welcome/', include('welcomepage.urls')),
     url(r'^account/', include('accountpage.urls')),
+    url(r'^resetpassword/', include('resetpassword.urls')),
 ]

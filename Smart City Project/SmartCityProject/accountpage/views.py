@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.db import models
 from accountpage.forms import editform
-from accountpage.forms import changepasswordform
 from django.contrib.auth.models import User, Group
 from django.contrib import messages
 from django.contrib.auth.forms import PasswordChangeForm
@@ -46,7 +45,7 @@ def accountchangepasswordpage(request):
         form = PasswordChangeForm(data = request.POST, user = request.user)
         if form.is_valid():
             form.save();
-            return redirect('/account/')
+            return redirect('/login/')
     else:
         form = PasswordChangeForm(user = request.user)
     return render (request, 'changepasswordpage.html', {'form' : form})
