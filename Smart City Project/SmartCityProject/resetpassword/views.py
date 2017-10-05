@@ -21,9 +21,15 @@ def resetpasswordpage(request):
                 user1.set_password('abc123')
                 user1.save()
                 return redirect('/resetpassword/success/')
+            else:
+                form = resetpasswordform()
+                return render (request, 'resetpasswordpage.html', {'form' : form, 'messages' : "The username or email is incorrect."})
+        else:
+            form = resetpasswordform()
+            return render (request, 'resetpasswordpage.html', {'form' : form, 'messages' : "The username or email is incorrect."})
     else:
         form = resetpasswordform()
-    return render (request, 'resetpasswordpage.html', {'form' : form})
+    return render (request, 'resetpasswordpage.html', {'form' : form, 'messages' : ""})
 
 def resetsuccesspage(request):
     return render (request, 'resetsuccesspage.html')
