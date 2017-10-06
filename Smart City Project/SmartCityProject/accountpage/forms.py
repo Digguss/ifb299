@@ -7,10 +7,11 @@ class editform(forms.ModelForm):
     first_name = forms.CharField(max_length= 30, required= False)
     last_name = forms.CharField(max_length= 30, required= False)
     address = forms.CharField(max_length= 30, required = False)
+    phonenumber = forms.CharField(max_length= 30, required = False)
 
     class Meta:
         model = User
-        fields = ('email','first_name', 'last_name', 'address')
+        fields = ('email','first_name', 'last_name', 'address', 'phonenumber')
 
 
 class changepasswordform(PasswordChangeForm):

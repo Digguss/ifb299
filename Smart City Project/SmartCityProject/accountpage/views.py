@@ -33,9 +33,13 @@ def accounteditpage(request):
             else:
                 user = form.save(commit = False)
                 user.save()
+                user.webuser.address = form.cleaned_data['address']
+                user.webuser.phonenumber = form.cleaned_data['phonenumber']
+                user.webuser.save()
                 return redirect('/account/')
     else:
-        form = editform(instance = request.user)
+        # Insert default values into form
+        form = editform({'email' : request.user.email, 'first_name' : request.user.first_name, 'last_name' : request.user.last_name, 'address' : request.user.webuser.address, 'phonenumber' : request.user.webuser.phonenumber}, instance = request.user)
     return render (request, 'accounteditpage.html', {'form' : form})
 
 def accountchangepasswordpage(request):
