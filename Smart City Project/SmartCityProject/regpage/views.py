@@ -29,7 +29,7 @@ def registration(request):
                 usergroup.user_set.add(user)
                 user.refresh_from_db()
                 user.webuser.address = form.cleaned_data['address']
-                user.webuser.address = form.cleaned_data['phonenumber']
+                user.webuser.phonenumber = form.cleaned_data['phonenumber']
                 user.webuser.save()
                 return redirect('/login/')
     else:

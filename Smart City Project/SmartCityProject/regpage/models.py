@@ -10,7 +10,12 @@ class WebUser(models.Model):
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 30)
 
+    def __str__(self):
+        return self.user.username
+
+
+
 @receiver(post_save, sender=User)
-def saveuser(sender, created, **kwargs):
+def saveuser(sender,instance, created, **kwargs):
     if created:
         WebUser.objects.create(user=instance)
