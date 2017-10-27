@@ -1,0 +1,196 @@
+<style>
+h1{
+  text-align: center;
+  background-color: lightblue;
+  font-size: 50px;
+  font-family: Arial;
+  position: relative;
+  margin-left: 0;
+  margin-top: 0;
+}
+h2{
+  text-align: center;
+  font-family: arial;
+  color: black;
+}
+label{
+  display: block;
+}
+.sidebarul{
+  position: fixed;
+  background-color: lightblue;
+  top: 50px;
+  margin-left: 0;
+  padding-left: 0px;
+  padding-bottom: 600px;
+}
+.sidebarul a{
+  display: block;
+  padding-bottom: 10px;
+  background-color: lightblue;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: arial;
+  color: black;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 4px;
+}
+.sidebarul a:hover{
+  background-color: grey;
+  color: white;
+}
+.formpost{
+  margin: 100px auto;
+  width: 23em;
+  min-width: 300px;
+  text-align: center;
+  background-color: lightblue;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  font-family: arial;
+  font-size: 20px;
+  position: relative;
+  top: 100px;
+}
+.pw{
+  width: 200px;
+}
+.
+button{
+  background-color: white;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: white;
+  height: 40px;
+}
+p{
+  font-size: 24px;
+  font-family: arial;
+  position: fixed;
+  margin-left: 100px auto;
+  width: 70%;
+  left: 201px;
+  }
+.divbox{
+    font-size: 20px;
+    font-family: arial;
+    position: fixed;
+    margin-left: 100px auto;
+    width: 70%;
+    left: 201px;
+    top: 200px;
+    }
+.messages{
+  color: red;
+}
+th, td {
+  display: relative;
+  text-align: center;
+  background-color: white;
+  font-family: arial;
+  border-style: solid;
+  border-width: 0px;
+  width: 20%;
+  border-color: black;
+  font-size: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+}
+td a{
+  text-decoration: none;
+  color: black;
+}
+td a:hover{
+  color: blue;
+}
+th a{
+  text-decoration: none;
+  color: black;
+}
+th a:hover{
+  color: blue;
+}
+
+
+table{
+  display: inline;
+  position: relative;
+  left: 70px;
+}
+</style>
+<html>
+
+<h1> Admin Portal </h1>
+
+<div class="sidebarul">
+  <h2> Contents </h2>
+<a href="/">Admin Portal</a>
+<a href="/logout/">Logout</a>
+</div>
+
+<p> Welcome {{user.username}} you last logged on {{user.last_login}}
+  <br>
+  Please Select a category to view
+</p>
+
+
+
+<div class="divbox">
+  <table>
+    <tr>
+      <th style="font-size:32px"> Users </th>
+      <th style="font-size:32px">  Groups </th>
+      <th style="font-size:32px"> Information </th>
+      <th style="font-size:32px">  City Map</th>
+      <th style="font-size:32px">  Admin Tools</th>
+    </tr>
+    <tr>
+      <td> <a href="/admin/createuser"> Create user</a></th>
+      <td> <a href="/admin/addgroup"> Create groups</a></th>
+      <td> <a href="/admin/cityparks"> City Parks</a></th>
+      <td> <a href="/admin/mapupload"> Upload City Map</a></th>
+      <td> <a href="/admin/createstaff">Create Admin</a></td>
+    </tr>
+    <tr>
+      <td> <a href="/admin/users"> Edit Users </a> </th>
+      <td><a href="/admin/groups">Edit Groups</a></th>
+      <td><a href="/admin/colleges">Colleges</a></th>
+        <td><a href="/admin/citymap"> City Map</a></th>
+    <tr>
+      <td></th>
+      <td></th>
+      <td><a href="/admin/hotels"</a>Hotels</th>
+    </tr>
+    <tr>
+      <td></th>
+      <td></th>
+      <td><a href="/admin/industries"</a>Industries</th>
+    </tr>
+    <tr>
+      <td></th>
+      <td></th>
+      <td><a href="/admin/museums"</a>Museums</th>
+    </tr>
+    <tr>
+      <td></th>
+      <td></th>
+      <td><a href="/admin/restaraunts"</a>Restaraunts</th>
+    </tr>
+    <tr>
+      <td></th>
+      <td></th>
+      <td><a href="/admin/shoppingmalls"</a>Shopping Malls</th>
+    </tr>
+    <tr>
+      <td></th>
+      <td></th>
+      <td><a href="/admin/zoos"</a>Zoos</th>
+    </tr>
+
+  </table>
+</div>
+</html>

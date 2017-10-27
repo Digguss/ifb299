@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^development/', admin.site.urls ),
+    url(r'^admin/', include('admin.urls')),
     url(r'^register/', include('regpage.urls')),
     url(r'^', include('homepage.urls')),
     url(r'^login/', include('loginpage.urls')),
@@ -26,4 +29,6 @@ urlpatterns = [
     url(r'^welcome/', include('welcomepage.urls')),
     url(r'^account/', include('accountpage.urls')),
     url(r'^resetpassword/', include('resetpassword.urls')),
-]
+    url(r'^informationcreaton/', include('informationpage.urls')),
+    url(r'^cityinfomation/', include('viewinfopages.urls')),
+]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

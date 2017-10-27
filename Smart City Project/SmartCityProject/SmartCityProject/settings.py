@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'regpage.apps.RegpageConfig'
+    'regpage.apps.RegpageConfig',
+    'informationpage.apps.InformationpageConfig',
 ]
 
 MIDDLEWARE = [
@@ -56,9 +57,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-        #"C:/Users/Kyle/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates/"
+        "C:/Users/Kyle/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates/"
         #"C:/Users/user/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
-        "C:/Users/yoda3/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
+        #"C:/Users/yoda3/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'SmartCitydatabase',
         'USER': 'root',
-        'PASSWORD': 'toor',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -109,6 +110,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -127,3 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+MEDIA_URL = '/storage/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/storage/')
