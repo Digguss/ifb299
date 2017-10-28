@@ -20,7 +20,7 @@ from django.conf import settings
 
 
 urlpatterns = [
-    url(r'^development/', admin.site.urls ),
+    url(r'^adminportal/', admin.site.urls ),
     url(r'^admin/', include('admin.urls')),
     url(r'^register/', include('regpage.urls')),
     url(r'^', include('homepage.urls')),

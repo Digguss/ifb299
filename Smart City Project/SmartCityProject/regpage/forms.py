@@ -5,7 +5,7 @@ from django.contrib.auth.models import User, Group
 
 class regpage(UserCreationForm):
     email = forms.EmailField(max_length = 100, required= True)
-    groups = forms.ModelChoiceField(queryset=Group.objects.all(), label="Account Type", required= True)
+    groups = forms.ModelChoiceField(queryset=Group.objects.all(), required= True)
     first_name = forms.CharField(max_length= 30, required= False)
     last_name = forms.CharField(max_length= 30, required= False)
     address = forms.CharField(max_length= 30, required = False)

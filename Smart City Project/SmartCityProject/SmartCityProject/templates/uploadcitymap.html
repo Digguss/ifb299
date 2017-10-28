@@ -91,9 +91,7 @@ button{
   background-color: grey;
   color: white;
 }
-.errormessages{
-  color: red;
-}
+
 </style>
 
   <h1>Register Account</h1>
@@ -103,25 +101,15 @@ button{
   <div class ='postdiv'>
   <form method="post" >
     {% csrf_token %}
-  <h2> Register </h2>
-  <div class='errormessages'>
-    {% if messages %}
-    <ul>
-      {% for message in messages %}
-      <li>{{message}}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </div>
+  <h2> Upload City Map </h2>
     {{ form.as_p }}
     <button type="submit">Regiser Account</button>
   </form>
   </div>
 
   <ul class="sidebar">
-    <h2> Content </h2>
-    <a href="/"> Homepage </a>
-    <a href="/login/"> Login </a>
-    <a href="/register/"> Register Account </a>
-    <a href="/help/"> Help</a>
+    <h2> Context </h2>
+    <a href="/"> Admin Portal </a>
+    <a href="/adminportal/">Django Admin Portal</a>
+    <a href="/logout/"> Logout </a>
     </ul>

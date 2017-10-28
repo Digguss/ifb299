@@ -6,6 +6,7 @@ from django.contrib import messages
 from .forms import regpage, regpageadmin
 from django.contrib.auth.models import Group, User
 from django.contrib import messages
+from .forms import imgupload
 # Create your views here.
 
 
@@ -92,3 +93,14 @@ def createadmin(request):
         else:
             return redirect('/')
     return render(request, 'regadmin.html', {'form': form})
+
+def uploadImage(request):
+    if request.user.is_authenticated:
+        if request.user.is_staff:
+            form = imgupload(request.POST,request.FILES or None)
+            if form.is_valid():
+                form.save()
+                return redirect('admin/home')
+        else:
+            return ('/')
+    return render(request, "uploadcitymap.html",{'form':form})

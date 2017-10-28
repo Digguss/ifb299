@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User, Group
+from informationpage.models import citymap
 
 
 class regpage(UserCreationForm):
@@ -30,3 +31,8 @@ class regpageadmin(UserCreationForm):
         help_texts = {
             'username': "30 characters or less. Characters, digits and @/./+/-/_ only."
         }
+
+class imgupload(forms.ModelForm):
+    class Meta:
+        model = citymap
+        fields = ('name','citymap')
