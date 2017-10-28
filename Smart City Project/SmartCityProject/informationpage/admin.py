@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import hotel, museum, restaraunt,shoppingmall,industrie,city_park,zoo,college,citymap
+from .models import hotel, museum, restaraunt,shoppingmall,industrie,city_park,zoo,college,citymap, libary
 
 # Register your models here.
 
@@ -12,3 +12,4 @@ admin.site.register(city_park)
 admin.site.register(zoo)
 admin.site.register(college)
 admin.site.register(citymap)
+admin.site.register(libary)

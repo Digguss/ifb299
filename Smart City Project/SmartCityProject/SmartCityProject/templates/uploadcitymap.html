@@ -99,11 +99,11 @@ button{
 
 
   <div class ='postdiv'>
-  <form method="post" >
+  <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
   <h2> Upload City Map </h2>
     {{ form.as_p }}
-    <button type="submit">Regiser Account</button>
+    <button type="submit">Upload</button>
   </form>
   </div>
 

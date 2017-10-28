@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from informationpage.forms import enterhotelinfo
+from .models import citymap
 # Create your views here.
 
 def infopage(request):

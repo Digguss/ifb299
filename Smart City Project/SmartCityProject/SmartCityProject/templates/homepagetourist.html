@@ -59,29 +59,29 @@ h2{
   margin-left: 100px auto;
   width: 25%;
   left: 700px;
-  bottom: 200px;
+  bottom: 25px;
 }
 .malls{
   position: fixed;
   margin-left: 100px auto;
   width: 25%;
   left: 201px;
-  bottom: 200px;
+  bottom: 25px;
 }
 .zoos{
   position: fixed;
   margin-left: 100px auto;
   width: 25%;
   left: 1200px;
-  bottom: 200px;
+  bottom: 25px;
 }
 th, td {
   display: relative;
   text-align: center;
-  background-color: white;
+  background-color: lightblue;
   font-family: arial;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   width: 500px;
 }
 div{
@@ -94,6 +94,10 @@ table{
   display: inline;
   position: relative;
 }
+img{
+  width: 250px;
+  height: 225px;
+}
 </style>
 
 <h1> Welcome Tourist {{user.username}} </h1>
@@ -101,7 +105,7 @@ table{
 <ul class="sidebar">
   <h2> Content </h2>
   <a href="/">Home</a>
-  <a href="/citymap/"> City Map</a>
+  <a href="/cityinfomation/citymap/"> City Map</a>
   <a href="/account/">Account Settings</a>
   <a href="/help/">Help</a>
   <a href="/logout/">Logout</a>
@@ -111,12 +115,12 @@ table{
   <h2> Hotels </h2>
   <table>
     <tr>
-      <th> Hotel Image </th>
-      <th> Hotel Link </th>
+      <th><img src={{hotels.0.image.url}}> </th>
+      <th>  <a href="/cityinfomation/hotelone"> {{hotels.0.name}}</a> </th>
     </tr>
     <tr>
-      <td> hotel.png</td>
-      <th> Link here</th>
+      <td> <img src={{hotels.1.image.url}}> </td>
+      <th> <a href="/cityinfomation/hoteltwo"> {{hotels.1.name}}</a>  </th>
     </tr>
   </table>
 </div>
@@ -124,12 +128,12 @@ table{
   <h2> Museums </h2>
   <table>
     <tr>
-      <th> museum image </th>
-      <th> museums Link </th>
+      <th> <img src={{museums.0.image.url}}> </th>
+      <th> <a href="/cityinfomation/museumzero"> {{museums.0.name}}</a></th>
     </tr>
     <tr>
-      <td> museums.png</td>
-      <th> Link here</th>
+      <td> <img src={{museums.1.image.url}}></td>
+      <th> <a href="/cityinfomation/museumone"> {{museums.1.name}}</a></th>
     </tr>
   </table>
 </div>
@@ -137,12 +141,12 @@ table{
   <h2> City Parks </h2>
   <table>
     <tr>
-      <th> park image </th>
-      <th> park  Link </th>
+      <th><img src={{cityparks.0.image.url}}> </th>
+      <th> <a href="/cityinfomation/parkone"> {{cityparks.0.name}}</a> </th>
     </tr>
     <tr>
-      <td> parks png</td>
-      <th> Link here</th>
+      <td> <img src={{cityparks.1.image.url}}></td>
+      <th> <a href="/cityinfomation/parktwo"> {{cityparks.1.name}}</a></th>
     </tr>
   </table>
 </div>

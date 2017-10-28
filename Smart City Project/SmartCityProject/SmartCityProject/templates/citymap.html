@@ -1,0 +1,63 @@
+<style>
+
+h1 {
+  text-align: center;
+  background-color: lightblue;
+  font-family: arial;
+  font-size: 50px;
+}
+h2{
+  text-align: center;
+  font-family: arial;
+}
+p{
+  text-align: left;
+  font-size: 18px;
+  font-family:  arial;
+  width: 50%;
+  margin: 100px auto;
+}
+.sidebar{
+  position: fixed;
+  background-color: lightblue;
+  top: 50px;
+  margin-left: 0;
+  padding-left: 0;
+  padding-bottom: 600px;
+}
+.sidebar a{
+  display: block;
+  padding-bottom: 10px;
+  background-color: lightblue;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: arial;
+  color: black;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 4px;
+}
+.sidebar a:hover{
+  background-color: grey;
+  color: white;
+}
+img{
+  position: fixed;
+  width: 80%;
+  left: 12%;
+
+}
+</style>
+
+<h1> City Map </h1>
+
+<img src='{{mapofcity.0.citymap.url}}'>
+<ul class='sidebar'>
+<h2> Content </h2>
+<a href="cityinfomation/citymap"> City Map </a>
+<a href="/"> Homepage </a>
+<a href="/account/"> Account Settings </a>
+<a href="/help/"> Help </a>
+<a href="/logout/"> Logout</a>
+</ul>

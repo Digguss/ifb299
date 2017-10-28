@@ -3,6 +3,8 @@ from . import views
 
 urlpatterns = [
 
-    url(r'^', views.viewpage,)
-
+    url(r'hotelone', views.hotelpageone),
+    url(r'hoteltwo', views.hotelpagetwo),
+    url(r'museumone', views.musone),
+    url(r'citymap', views.citymapview),
             ]
