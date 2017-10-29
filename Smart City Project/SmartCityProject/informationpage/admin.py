@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import hotel, museum, restaraunt,shoppingmall,industrie,city_park,zoo,college,citymap, libary
+from .models import hotel, museum, restaurant,shoppingmall,industrie,city_park,zoo,college,citymap, libary
 
 # Register your models here.
 
 admin.site.register(hotel)
 admin.site.register(museum)
-admin.site.register(restaraunt)
+admin.site.register(restaurant)
 admin.site.register(shoppingmall)
 admin.site.register(industrie)
 admin.site.register(city_park)

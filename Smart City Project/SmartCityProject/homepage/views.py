@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
-from informationpage.models import hotel, museum, restaraunt, shoppingmall, industrie, city_park, zoo, college, libary
+from informationpage.models import hotel, museum, restaurant, shoppingmall, industrie, city_park, zoo, college, libary
 
 
 # Create your views here.
@@ -26,10 +26,13 @@ def homepagetourist(request):
     hotels = hotel.objects.all()
     museums = museum.objects.all()
     cityparks = city_park.objects.all()
+    malls = shoppingmall.objects.all()
+    rest = restaurant.objects.all()
+    zoos = zoo.objects.all()
     print(museum)
     if request.user.is_authenticated:
         if request.user.groups.filter(name='tourist').exists():
-            return render(request, 'homepagetourist.html',  {'museums':museums, 'hotels':hotels, 'cityparks':cityparks})
+            return render(request, 'homepagetourist.html',  {'museums':museums, 'hotels':hotels, 'cityparks':cityparks, 'cityparks':cityparks, 'malls':malls, 'rest':rest,'zoos':zoos})
         else:
             return redirect('/')
     else:
@@ -40,23 +43,26 @@ def homepageStudent(request):
     libarys = libary.objects.all()
     cityparks = city_park.objects.all()
     malls = shoppingmall.objects.all()
-    restaraunts = restaraunt.objects.all()
+    restaurants = restaurant.objects.all()
     colleges = college.objects.all()
     if request.user.is_authenticated:
         if request.user.groups.filter(name='student').exists():
-            return render(request, 'homepageStudent.html', {'museums': museums, 'libarys':libarys, 'cityparks':cityparks, 'malls':malls, 'restaraunts':restaraunts,'colleges':colleges})
+            return render(request, 'homepageStudent.html', {'museums': museums, 'libarys':libarys, 'cityparks':cityparks, 'malls':malls, 'rest':restaurants,'colleges':colleges})
         else:
             return redirect('/')
     else:
         return redirect('/')
-    
+
 def homepageBusiness(request):
     hotels = hotel.objects.all()
     cityparks = city_park.objects.all()
     museums = museum.objects.all()
+    malls = shoppingmall.objects.all()
+    rest = restaurant.objects.all()
+    indust = industrie.objects.all()
     if request.user.is_authenticated:
         if request.user.groups.filter(name='business').exists():
-            return render(request, 'homepageBusiness.html', {'museums':museums, 'hotels':hotels, 'cityparks':cityparks})
+            return render(request, 'homepageBusiness.html', {'museums':museums, 'hotels':hotels, 'cityparks':cityparks, 'malls':malls, 'rest':rest, 'indust':indust})
         else:
             return redirect('/')
     else:

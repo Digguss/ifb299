@@ -37,43 +37,48 @@ h2{
   color: white;
 }
 .Libraryinfo {
-  position: fixed;
+  position: relative;
   margin-left: 100px auto;
   width: 25%;
   left: 201px;
   }
 .museums{
-  position: fixed;
+  position: relative;
   margin-left: 100px auto;
   width: 25%;
   left: 700px;
+  top: -63%;
 }
 .parks{
-  position: fixed;
+  position: relative;
   margin-left: 100px auto;
   width: 25%;
   left: 1200px;
+  top: -126%;
 }
-.restaraunts{
-  position: fixed;
+.restaurants{
+  position: relative;
   margin-left: 100px auto;
   width: 25%;
   left: 700px;
   bottom: 25px;
+  top: -183%;
 }
 .malls{
-  position: fixed;
+  position: relative;
   margin-left: 100px auto;
   width: 25%;
   left: 201px;
   bottom: 25px;
+  top: -120%;
 }
 .Colleges{
-  position: fixed;
+  position: relative;
   margin-left: 100px auto;
   width: 25%;
   left: 1200px;
   bottom: 25px;
+  top: -246%;
 }
 
 th, td {
@@ -107,7 +112,6 @@ html{
 <html>
 
 <h1> Welcome Student {{user.username}} </h1>
-<h2> Please Select a Catergory and information link to view information </h2>
 
 <ul class="sidebar">
   <h2> Content </h2>
@@ -119,7 +123,7 @@ html{
 </ul>
 
 <div class='Libraryinfo'>
-  <h2> Librarys </h2>
+  <h2> librarys </h2>
   <table>
     <tr>
       <th> <img src={{libarys.0.image.url}}> </th>
@@ -131,7 +135,6 @@ html{
     </tr>
   </table>
 </div>
-<div class='museums'>
   <div class='museums'>
     <h2> Museums </h2>
     <table>
@@ -163,25 +166,25 @@ html{
   <h2> Shopping Malls </h2>
   <table>
     <tr>
-      <th>  </th>
-      <th> </a> </th>
+      <th> <img src={{malls.0.image.url}}></th>
+      <th> <a href="/cityinfomation/mallone"> {{malls.0.name}}</a> </th>
     </tr>
     <tr>
-      <td> </td>
-      <th></a></th>
+      <td> <img src={{malls.1.image.url}}></td>
+      <th> <a href="/cityinfomation/malltwo"> {{malls.1.name}}</th>
     </tr>
   </table>
 </div>
-<div class='restaraunts'>
-  <h2> Restaraunts </h2>
+<div class='restaurants'>
+  <h2> Restaurants </h2>
   <table>
     <tr>
-      <th> Restaraunt image </th>
-      <th> Restaraunt  Link </th>
+      <th> <img src={{rest.0.image.url}}> </th>
+      <th> <a href="/cityinfomation/restaurantone"> {{rest.0.name}} </a> </th>
     </tr>
     <tr>
-      <td> Restaraunt.png</td>
-      <th> Link here</th>
+      <td> <img src={{rest.1.image.url}}></td>
+      <th><a href="/cityinfomation/restauranttwo"> {{rest.1.name}} </a></th>
     </tr>
   </table>
 </div>
@@ -189,12 +192,12 @@ html{
   <h2> Colleges </h2>
   <table>
     <tr>
-      <th> Colleges image </th>
-      <th> Colleges  Link </th>
+      <th> <img src={{colleges.0.image.url}}> </th>
+      <th> <a href="/cityinfomation/collegeone"> {{colleges.0.name}} </a></th>
     </tr>
     <tr>
-      <td> Colleges.png</td>
-      <th> Link here</th>
+      <td> <img src={{colleges.1.image.url}}></td>
+      <th> <a href="/cityinfomation/collegetwo"> {{colleges.1.name}} </a></th>
     </tr>
   </table>
 </div>

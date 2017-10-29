@@ -7,7 +7,7 @@ photostorage = FileSystemStorage(location='/SmartCityProject/storage')
 
 class hotel(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 300)
     email = models.CharField(max_length= 256,null=True)
@@ -18,7 +18,7 @@ class hotel(models.Model):
 
 class museum(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -28,9 +28,9 @@ class museum(models.Model):
     def __str__(self):
         return self.name
 
-class restaraunt(models.Model):
+class restaurant(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -42,7 +42,7 @@ class restaraunt(models.Model):
 
 class shoppingmall(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -53,7 +53,7 @@ class shoppingmall(models.Model):
 
 class industrie(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -64,7 +64,7 @@ class industrie(models.Model):
 
 class city_park(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -75,7 +75,7 @@ class city_park(models.Model):
 
 class zoo(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -86,7 +86,7 @@ class zoo(models.Model):
 
 class college(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
@@ -97,7 +97,7 @@ class college(models.Model):
 
 class libary(models.Model):
     name = models.CharField(max_length = 300)
-    descrption = models.CharField(max_length= 256)
+    description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)
     address = models.CharField(max_length = 100)
     email = models.CharField(max_length= 256,null=True)
