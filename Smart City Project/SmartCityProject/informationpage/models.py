@@ -95,7 +95,7 @@ class college(models.Model):
     def __str__(self):
         return self.name
 
-class libary(models.Model):
+class library(models.Model):
     name = models.CharField(max_length = 300)
     description = models.CharField(max_length= 256)
     phonenumber = models.CharField(max_length= 30)

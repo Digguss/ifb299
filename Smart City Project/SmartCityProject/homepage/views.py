@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User, Group
-from informationpage.models import hotel, museum, restaurant, shoppingmall, industrie, city_park, zoo, college, libary
+from informationpage.models import hotel, museum, restaurant, shoppingmall, industrie, city_park, zoo, college, library
 
 
 # Create your views here.
@@ -40,14 +40,14 @@ def homepagetourist(request):
 
 def homepageStudent(request):
     museums = museum.objects.all()
-    libarys = libary.objects.all()
+    librarys = library.objects.all()
     cityparks = city_park.objects.all()
     malls = shoppingmall.objects.all()
     restaurants = restaurant.objects.all()
     colleges = college.objects.all()
     if request.user.is_authenticated:
         if request.user.groups.filter(name='student').exists():
-            return render(request, 'homepageStudent.html', {'museums': museums, 'libarys':libarys, 'cityparks':cityparks, 'malls':malls, 'rest':restaurants,'colleges':colleges})
+            return render(request, 'homepageStudent.html', {'museums': museums, 'librarys':librarys, 'cityparks':cityparks, 'malls':malls, 'rest':restaurants,'colleges':colleges})
         else:
             return redirect('/')
     else:
