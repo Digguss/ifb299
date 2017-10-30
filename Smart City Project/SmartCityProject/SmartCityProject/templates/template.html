@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<!--This is the page where people will be able to login using their detials
+may even incorporate the user registration page here as well-->
+<head>
+	<meta charset="utf-8">
+	<title>Register</title>
+	<link rel="stylesheet" type="text/css" href="styleDoc.css">
+</head>
+
+<!--Just a bit of playing round to create somehwere to type a password-->
+<body>
+	<div id="wrapper">
+		<!--Next we need to create multiple divs that hold all the elements-->
+		<div id="header"> 
+			<h1>Register</h1>
+			<h3>Looking for a mean restaurant?</h3>
+		</div>
+
+		<div id="sidebar">
+			<div class="sidebox">
+				<div id="menu">
+					<!--remember to change this ahref as this is just a placeholder-->
+					<a href="/">Homepage</a>
+					<a href="/login/">Login</a>
+					<a href="/register/">Register</a>
+					<a href="/help/">Help</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="content">
+			<!--This div shall hold the registration parts-->
+			<div id="registar">
+			<p>Please enter your details</p>
+				<form id="registerForm" style="text-align: right;">
+					<!--First just some simple basic information-->
+					{% csrf_token %}
+      				<h2> Register </h2>
+      				<div class='errormessages'>
+        				{% if messages %}
+        				<ul>
+          					{% for message in messages %}
+          					<li>{{message}}</li>
+          					{% endfor %}
+        				</ul>
+        				{% endif %}
+      				</div>
+        			{{ form.as_p }}
+        			<button type="submit">Regiser Account</button>
+				</form>
+				<p>Already got an account? <a href="/login/">Login</a></p>
+				
+			</div>
+		</div>
+
+		<div id="footer">
+			<p>Name of site&copy;</p>
+			<p>Created and programed by Bunnings BBQ Boys</p>
+		</div>
+
+	</div>
+</body>
+</html>
