@@ -31,5 +31,5 @@ urlpatterns = [
     url(r'^resetpassword/', include('resetpassword.urls')),
     url(r'^informationcreaton/', include('informationpage.urls')),
     url(r'^cityinfomation/', include('viewinfopages.urls')),
-    url(r'^helppage/', include('helppage.urls')),
+    url(r'^help/', include('helppage.urls')),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
