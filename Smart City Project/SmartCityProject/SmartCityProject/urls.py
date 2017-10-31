@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^informationcreaton/', include('informationpage.urls')),
     url(r'^cityinfomation/', include('viewinfopages.urls')),
     url(r'^help/', include('helppage.urls')),
+    url(r'^search/', include('search.urls')),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
