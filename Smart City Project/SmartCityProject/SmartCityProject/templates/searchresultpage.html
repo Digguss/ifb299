@@ -115,19 +115,25 @@
     border-width: 1px;
     border-color: black;
     background-color: lightblue;
+    left: 7%;
   }
   .searchresults_container {
     position: relative;
     min-height: 150px;
     left: 15%;
-    width: 82%;
+    width: 78%;
     padding: 1%;
+    padding-left: 5%;
   }
   .searchresults {
     border-style: none;
+  }
+  pre{
     background-color: lightblue;
-    font-size: 18px;
+    font-size: 22px;
     font-family: Arial;
+    font-weight: bold;
+    position: relative;
   }
 </style>
 <html>
@@ -137,8 +143,9 @@
     <ul class="sidebar">
       <h2> Content </h2>
       <a href="/">Home</a>
-      <a href="/citymap/"> City Map</a>
+      <a href="/cityinfomation/citymap/"> City Map</a>
       <a href="/account/">Account Settings</a>
+      <a href="/search/">Search</a>
       <a href="/help/">Help</a>
       <a href="/logout/">Logout</a>
     </ul>
@@ -153,7 +160,7 @@
 
     <div class = "searchresults_container">
       <div class = "searchresults">
-        {{ searchresults }}
+        <pre>{{ searchresults }}</pre>
       </div>
     </div>
   </body>

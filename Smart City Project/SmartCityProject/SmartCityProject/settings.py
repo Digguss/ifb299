@@ -60,7 +60,7 @@ TEMPLATES = [
         'DIRS': [
         #"C:/Users/Kyle/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates/"
         #"C:/Users/user/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
-        
+        "C:/Users/yoda3/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'SmartCitydatabase',
         'USER': 'root',
-        'PASSWORD': 'password',
+        'PASSWORD': 'toor',
         'HOST': 'localhost',
         'PORT': '3306',
     }

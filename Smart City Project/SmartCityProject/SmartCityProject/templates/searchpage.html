@@ -115,6 +115,7 @@
     border-width: 1px;
     border-color: black;
     background-color: lightblue;
+    left: 7%;
   }
 </style>
 <html>
@@ -124,14 +125,15 @@
     <ul class="sidebar">
       <h2> Content </h2>
       <a href="/">Home</a>
-      <a href="/citymap/"> City Map</a>
+      <a href="/cityinfomation/citymap/"> City Map</a>
       <a href="/account/">Account Settings</a>
+      <a href="/search/">Search</a>
       <a href="/help/">Help</a>
       <a href="/logout/">Logout</a>
     </ul>
 
     <div class = "searchform">
-      <form method="get" >
+      <form method="post" >
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Search</button>
