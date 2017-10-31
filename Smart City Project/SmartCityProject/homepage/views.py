@@ -31,7 +31,7 @@ def homepagetourist(request):
     zoos = zoo.objects.all()
     print(museum)
     if request.user.is_authenticated:
-        if request.user.groups.filter(name='tourist').exists():
+        if request.user.groups.filter(name='tourist').exists() or request.user.is_superuser:
             return render(request, 'homepagetourist.html',  {'museums':museums, 'hotels':hotels, 'cityparks':cityparks, 'cityparks':cityparks, 'malls':malls, 'rest':rest,'zoos':zoos})
         else:
             return redirect('/')
@@ -46,7 +46,7 @@ def homepageStudent(request):
     restaurants = restaurant.objects.all()
     colleges = college.objects.all()
     if request.user.is_authenticated:
-        if request.user.groups.filter(name='student').exists():
+        if request.user.groups.filter(name='student').exists() or request.user.is_superuser:
             return render(request, 'homepageStudent.html', {'museums': museums, 'librarys':librarys, 'cityparks':cityparks, 'malls':malls, 'rest':restaurants,'colleges':colleges})
         else:
             return redirect('/')
@@ -61,7 +61,7 @@ def homepageBusiness(request):
     rest = restaurant.objects.all()
     indust = industrie.objects.all()
     if request.user.is_authenticated:
-        if request.user.groups.filter(name='business').exists():
+        if request.user.groups.filter(name='business').exists() or request.user.is_superuser:
             return render(request, 'homepageBusiness.html', {'museums':museums, 'hotels':hotels, 'cityparks':cityparks, 'malls':malls, 'rest':rest, 'indust':indust})
         else:
             return redirect('/')
