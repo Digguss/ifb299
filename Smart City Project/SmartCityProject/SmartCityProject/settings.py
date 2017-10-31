@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'regpage.apps.RegpageConfig',
     'informationpage.apps.InformationpageConfig',
+    'search.apps.SearchConfig',
 ]
 
 MIDDLEWARE = [
@@ -57,9 +58,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-        "C:/Users/Kyle/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates/"
+        #"C:/Users/Kyle/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates/"
         #"C:/Users/user/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
-        #"C:/Users/yoda3/Documents/GitHub/ifb299/Smart City Project/SmartCityProject/SmartCityProject/templates"
+        
         ],
         'APP_DIRS': True,
         'OPTIONS': {
