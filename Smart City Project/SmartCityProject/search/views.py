@@ -31,7 +31,10 @@ def searchpage(request):
             if library.objects.filter(name__icontains = query).exists():
                 resultsList.append(list(library.objects.filter(name__icontains = query)))
             for result in resultsList:
-                searchresults += result.name
+                try:
+                    searchresults += result.name
+                except Exception as e:
+                    searchresults += result[0].name
                 searchresults += "\n"
 
             return render (request, 'searchresultpage.html', {'form' : form, 'searchresults' : searchresults, 'searchquery' : query})
